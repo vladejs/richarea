@@ -1,0 +1,16 @@
+<template name="RichArea">
+{{#if custom}}
+	{{> UI.contentBlock }}
+{{else}}
+
+	<textarea></textarea>
+	{{> RichAreaPreview }}
+
+{{/if}}	
+</template>
+
+<template name="RichAreaPreview">
+{{#markdown}}
+	{{ content }}
+{{/markdown}}	
+</template>
